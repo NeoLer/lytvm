@@ -61,7 +61,7 @@ void free_heap_store(heap* heap, unsigned addr)
 
 void h_set(heap* heap, unsigned set_to, unsigned addr)
 {
-	//heap->conts[addr] = set_to;
+	*(unsigned*)heap->conts[addr] = set_to;
 }
 
 void h_write(heap* heap, unsigned addr, unsigned offset, unsigned bytes, unsigned data_addr)
